@@ -13,7 +13,9 @@ For support of FIX binary protocols, refer to the companion FIX/SOFH plugin
 
 NOTE: because the FIX ASCII protocol specification uses its own linebreaker 
 delimiter, this analyzer requires a version of BinPAC that supports the 
-&linebreaker attribute.
+&linebreaker attribute. You can get this BinPAC feature from this branch:
+
+https://github.com/reservoirlabs/binpac/tree/feature/linebreaker
 
 Some of the protocol specifications supported by this analyzer include:
 
