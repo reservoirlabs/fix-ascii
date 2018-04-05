@@ -1,0 +1,5 @@
+[package]
+description = ASCII FIX analyzer package
+tags = bro plugin, bro analyzer, ASCII FIX protocol analyzer
+script_dir = scripts/RLABS/FIX/ 
+build_command = ./configure --bro-dist=%(bro_dist)s && make

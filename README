@@ -1,0 +1,27 @@
+FIX ASCII PROTOCOL
+=======================
+
+The Financial Information eXchange (FIX) protocol (https://www.fixtrading.org/)
+is a standard electronic communications protocol for international real-time 
+exchange of information related to securities transactions and markets.  
+
+The FIX standard defines a set of protocols which can be organized in two
+classes: ASCII protocols and binary protocols. This plugin (fix4_fixt)
+implements a subset of the FIX standard based on the ASCII protocols. 
+For support of FIX binary protocols, refer to the companion FIX/SOFH plugin 
+(fix_sofh). 
+
+NOTE: because the FIX ASCII protocol specification uses its own linebreaker 
+delimiter, this analyzer requires a version of BinPAC that supports the 
+&linebreaker attribute.
+
+Some of the protocol specifications supported by this analyzer include:
+
+- FIX 4.2, FIX 4.4 and FIXT 1.1 Session Protocols with tagvalue Encodings (both
+  detection and validation).
+- Extraction of FIX/FIXT Session Protocol BeginString, BodyLength and MsgType.
+- Extraction of FIX/FIXT Session ProtocolSenderCompID, TargetCompIDassociated with 
+  logon messages.
+- FIX/FIXT Session Protocol spanning multiple TCP packets using the BinPAC attribute
+  linebreaker (see NOTE above).
+- Events generated: fix_detected(), fix_validated(), fix_logon().
