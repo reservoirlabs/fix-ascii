@@ -17,6 +17,10 @@ delimiter, this analyzer requires a version of BinPAC that supports the
 
 https://github.com/reservoirlabs/binpac/tree/feature/linebreaker
 
+Please notice that this analyzer only supports a small subset of the 
+FIX ASCII protocol. Its main intention is to detect FIX connections and do
+some basic validation, not to extract all possible fields.
+
 Some of the protocol specifications supported by this analyzer include:
 
 - FIX 4.2, FIX 4.4 and FIXT 1.1 Session Protocols with tagvalue Encodings (both
